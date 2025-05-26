@@ -1,0 +1,30 @@
+h1{
+  font-size: 50px;
+}
+
+body{
+	background-color: #C0C0C0;
+	font-family: helvetica;
+	text-align: justify;
+}
+
+hr{
+	background-color: black;
+	height: 1px;
+}
+
+div{
+	width: 1200px;
+}
+
+sup{
+	color: #0000CD;
+}
+
+.title1{
+	font-size: 25px;
+}
+
+.title2{
+	font-size: 15px;
+}

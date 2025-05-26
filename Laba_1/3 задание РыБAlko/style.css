@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e0d1;
+    color: #2f2f2f;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #4b5d3b;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.navigation {
+    width: 100%;
+    background: #3d4a33;
+}
+
+    .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .navigation li {
+        margin: 0;
+    }
+
+    .navigation button {
+        padding: 10px 18px;
+        background-color: #6b8e23;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+        .navigation button:hover {
+            background-color: #56721b;
+        }
+
+main {
+    padding: 30px;
+    background-color: #f7f7f7;
+    min-height: 600px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #2e3b1f;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #3a4a29;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: white;
+    border: 2px solid #d2d2d2;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    transition: transform 0.2s ease;
+}
+
+    .product-card:hover {
+        transform: scale(1.03);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+.product-details b {
+    font-size: 18px;
+    margin-top: 10px;
+    display: block;
+    color: #2e2e2e;
+}
+
+.product-details i {
+    font-style: italic;
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    display: block;
+}
+
+.product-card p {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card button {
+    background-color: #6b8e23;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .product-card button:hover {
+        background-color: #56721b;
+    }
+
+footer {
+    background-color: #4b5d3b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+    footer a {
+        color: #dcdcdc;
+        text-decoration: none;
+        margin: 0 8px;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    width: 250px;
+}
+
+.search-button {
+    margin-left: 10px;
+    padding: 10px 14px;
+    font-size: 16px;
+    background-color: #6b8e23;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .search-button:hover {
+        background-color: #56721b;
+    }

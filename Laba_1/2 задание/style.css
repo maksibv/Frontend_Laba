@@ -1,0 +1,32 @@
+body{
+	background-color: #DCDCDC;
+	white-space: nowrap;
+}
+
+.player{
+	font-family: helvetica;
+	font-size: 15px;
+}
+
+.red{
+	color: #8B0000;
+	background-color: #A9A9A9;
+	line-height: 100px;
+	padding: 4px;
+	font-size: 50px;
+	font-family: ms sans serif;
+	display: inline;
+  margin: 0 0.1em;
+  white-space: nowrap;
+}
+
+.black{
+	background-color: #A9A9A9;
+	line-height: 100px;
+	padding: 4px;
+	font-size: 50px;
+	font-family: ms sans serif;
+	display: inline;
+  margin: 0 0.1em;
+  white-space: nowrap;
+}
