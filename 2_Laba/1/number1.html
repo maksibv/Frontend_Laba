@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стилизованный список</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: rgb(226, 226, 226);
+        }
+        .list {
+            background-color: #ffa4b6;
+            padding: 12px;
+        }
+        ol {
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+        }
+        li {
+            padding: 6px 8px;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+        li.point {
+            background-color: #d76677;
+        }
+        .text {
+            background-color: #983646;
+            padding: 6px 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ol>
+            <li class="point"><span class="text">Apple</span></li>
+            <li class="point"><span class="text">Orange</span></li>
+            <li class="point"><span class="text">Pineapple</span></li>
+            <li class="point"><span class="text">Pear</span></li>
+            <li class="point"><span class="text">Cherry</span></li>
+        </ol>
+    </div>
+</body>
+</html>

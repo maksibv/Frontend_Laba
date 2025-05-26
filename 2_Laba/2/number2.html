@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        div{
+            background-color: rgb(241, 242, 243);
+            padding: 15px;
+            border-radius: 5px;
+        }
+        ul{
+            list-style-position: inside;
+            padding: 0;
+            margin: 10px 0;
+        }
+        li{
+            padding: 8px;
+            padding-left: 3%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li.made{
+            background-color: rgb(215, 215, 215);
+            list-style-image: url('img2.png');
+        }
+        li.do{
+            list-style-image: url('img1.png');
+            background-color: rgb(90, 181, 226);
+        }
+        li.do-gol{
+            list-style-image: url('img1.png');
+            background-color: rgb(126, 191, 241);
+        }
+        span.remove{
+            color: rgb(188, 0, 0);
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>My To Do List</h2>
+        <ul>
+            <li class = "do">
+                Hit the gym
+                <span class="remove">×</span>
+            </li>
+            <li class = "made">
+                <del>Pay bills</del>
+                <span class="remove">×</span>
+            </li>
+            <li class = "do">
+                Meet John
+                <span class="remove">×</span>
+            </li>
+            <li class = "do-gol">
+                Buy eggs
+                <span class="remove">×</span>
+            </li>
+            <li class = "made">
+                <del>Read a book</del>
+                <span class="remove">×</span>
+            </li>
+            <li class = "do-gol">
+                Organize office
+                <span class="remove">×</span>
+            </li>
+            <li class = "do">
+                Eat dinner
+                <span class="remove">×</span>
+            </li>
+            <li class = "do-gol">
+                Buy apples
+                <span class="remove">×</span>
+            </li>
+            <li class = "do">
+                Meet George
+                <span class="remove">×</span>
+            </li>
+            <li class = "do-gol">
+                Feed the cat
+                <span class="remove">×</span>
+            </li>
+            <li class = "made">
+                <del>Write a letter</del>
+                <span class="remove">×</span>
+            </li>
+            <li class = "do-gol">
+                Run 1 km
+                <span class="remove">×</span>   
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+div.gallery {
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    max-width: 100%;
+    display: flex;
+}
+.secondary-gallery {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+img {
+    outline: 3px solid rgb(193, 193, 193);
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.Glav {
+    width: 1000px;
+    height: 600px;
+}
+.Secondary {
+    width: calc(1000px / 6);
+    height: calc(1000px / 6);
+}
+img.Secondary:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    outline-color: #ff6b6b;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.725);
+}
