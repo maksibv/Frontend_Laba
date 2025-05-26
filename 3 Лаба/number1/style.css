@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    width: 500px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(201, 201, 201, 0.29);
+}
+
+th {
+    background-color: rgb(161, 216, 242);
+    padding: 0;
+    height: 30px;
+    width: 90px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+thead th:not(:first-child) {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+tbody th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 15;
+    background-color: rgb(161, 216, 242);
+}

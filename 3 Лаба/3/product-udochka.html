@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Удочка «Трофей»</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-gallery {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .thumbnails {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+            .thumbnails img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border: 2px solid transparent;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: border-color 0.3s;
+            }
+
+                .thumbnails img:hover {
+                    border-color: #6b8e23;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="log.png" alt="Логотип" class="logo">
+        <nav class="navigation">
+            <ul>
+                <li><button onclick="location.href='index.html'">🏠 Главная</button></li>
+                <li><button>🎣 Каталог</button></li>
+                <li><button>👨‍🔧 О нас</button></li>
+                <li><button>📞 Контакты</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>🎣 Удочка «Трофей» 4.5 м</h1>
+
+        <div class="product-gallery">
+            <img id="mainImage" src="udochka.jpg" alt="Большая удочка" class="main-image">
+            <div class="thumbnails">
+                <img src="udochka.jpg" alt="Миниатюра 1" onclick="changeImage('udochka.jpg')">
+                <img src="udochka2.jpg" alt="Миниатюра 2" onclick="changeImage('udochka2.jpg')">
+            </div>
+        </div>
+
+        <ul>
+            <li>Длина: 4.5 м</li>
+            <li>Вес: 250 г</li>
+            <li>Материал: Углепластик</li>
+            <li>Цвет: Черный с зелёным</li>
+        </ul>
+
+        <p><b>Цена:</b> 999р.</p>
+        <button>🧺 В корзину</button>
+    </main>
+
+    <footer>
+        <p>© 2024 РыБАлко. Ловим по-честному!</p>
+    </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+</body>
+</html>

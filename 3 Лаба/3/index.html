@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="РыБАлко, Рыбалка, Снасти, Ловись рыбка">
+    <title>РыБАлко — снасти, что надо!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="log.png">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="log.png" alt="Логотип РыБАлко" class="logo">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><button>🏠 Главная</button></li>
+                <li><button>🎣 Каталог</button></li>
+                <li><button onclick="location.href='info.html'">💳 Оплата и доставка</button></li>                <li><button>📞 Контакты</button></li>
+                <li><button>🧺 Корзина</button></li>
+                <li>
+                    <form action="" method="GET" class="search-form">
+                        <input type="text" name="query" placeholder="Чего ищем, рыбак?" class="search-input" required>
+                        <button type="submit" class="search-button">Искать</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>🎉 Добро пожаловать на РыБАлко — где снасти душу греют!</h1>
+        <br>
+
+        <section id="products">
+            <h2>🔥 Горячие предложения</h2>
+
+            <article class="product-card">
+                <a href="product-udochka.html">
+                    <img src="udochka.jpg" alt="Удочка Рыбацкая 'Трофей'">
+                </a>
+                <div class="product-details">
+                    <b>Удочка «Трофей» 4.5 м</b>
+                    <i>Лёгкая, как перышко, а прочная, как твоя любовь к рыбалке. Карась сам в неё запрыгнет!</i>
+                </div>
+                <p>Цена: 999р.</p>
+                <button onclick="location.href='product-udochka.html'">Подробнее</button>
+            </article>
+
+            <article class="product-card">
+                <a href="product-vodka.html">
+                    <img src="vodka.jpg" alt="Настойка 'Рыбацкий Бальзам'">
+                </a>
+                <div class="product-details">
+                    <b>Настойка «Рыбацкий Бальзам», 0.5 л</b>
+                    <i>Для разогрева души и тела. Не лекарство, но помогает. Особенно в хорошей компании.</i>
+                </div>
+                <p>Цена: 349р.</p>
+                <button onclick="location.href='product-vodka.html'">Подробнее</button>
+            </article>
+
+            <article class="product-card">
+                <a href="product-nazhivka.html">
+                    <img src="nazhivka.jpg" alt="Наживка 'Магнит'">
+                </a>
+                <div class="product-details">
+                    <b>Наживка «Магнит» для мирной рыбы</b>
+                    <i>Запах — такой, что сам бы съел. Но лучше — рыбке. Работает на озере, речке и даже в ведре!</i>
+                </div>
+                <p>Цена: 129р.</p>
+                <button onclick="location.href='product-nazhivka.html'">Подробнее</button>
+            </article>
+        </section>
+
+        <section id="promotions">
+            <h2>💥 Скидки? Будут!</h2>
+            <p>Пока тишина... Но ты не расслабляйся — скоро завезём жару! Следи за обновлениями, рыбачок.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 РыБАлко. Ловим по-честному!</p>
+        <p>Связь с нами:</p>
+        <p>Email: <a href="mailto:info@ebalka.ru">info@ebalka.ru</a></p>
+        <p>Телефон: <a href="">+7 (800) 555-35-35</a></p>
+        <p>Где мы есть:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://vk.com" target="_blank">VK</a>
+
+        <section style="margin-top: 20px;">
+            <p>🔧 При поддержке:</p>
+            <img src="Unity-logo.png" alt="Unity Logo" style="width: 120px; margin-top: 10px;">
+        </section>
+    </footer>
+</body>
+</html>
