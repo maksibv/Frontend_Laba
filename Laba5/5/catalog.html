@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="РыБАлко, Рыбалка, Снасти, Ловись рыбка">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>РыБАлко — Каталог товаров</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="log.png">
+    <style>
+        main {
+            padding: 30px;
+            background-color: #f7f7f7;
+            min-height: 80vh;
+        }
+        .page-layout {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        aside.filter {
+            flex: 1 1 220px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+        aside.filter h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #6b8e23;
+        }
+        aside.filter label {
+            display: block;
+            margin: 8px 0 4px;
+        }
+        aside.filter input[type="checkbox"],
+        aside.filter input[type="radio"],
+        aside.filter select {
+            margin-right: 5px;
+            transition: all 0.2s ease;
+        }
+        aside.filter input:focus,
+        aside.filter select:focus {
+            outline: 2px solid #6b8e23;
+            background-color: #f0fff0;
+        }
+        .catalog {
+            flex: 3;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .catalog__item {
+            background-color: white;
+            border: 2px solid #d2d2d2;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 280px;
+            padding: 15px;
+            transition: transform 0.2s ease;
+        }
+        .catalog__item:hover {
+            transform: scale(1.03);
+            border-color: #6b8e23;
+            box-shadow: 0 4px 15px rgba(107, 142, 35, 0.4);
+        }
+        .catalog__image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .catalog__title {
+            font-weight: bold;
+            font-size: 20px;
+            color: #2e2e2e;
+            margin: 5px 0;
+            text-align: center;
+        }
+        .catalog__description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: center;
+            min-height: 40px;
+        }
+        .catalog__price {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #6b8e23;
+        }
+        .catalog__button {
+            background-color: #6b8e23;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 250px;
+            transition: background-color 0.3s ease;
+        }
+        .catalog__button:hover {
+            background-color: #56721b;
+        }
+        .feedback-form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feedback-form h2 {
+            margin-top: 0;
+            color: #6b8e23;
+        }
+        .feedback-form label {
+            display: block;
+            margin: 12px 0 4px;
+            font-weight: bold;
+        }
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form select,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+        .feedback-form input:focus,
+        .feedback-form select:focus,
+        .feedback-form textarea:focus {
+            border-color: #6b8e23;
+            background-color: #f0fff0;
+            outline: none;
+        }
+        .feedback-form button {
+            margin-top: 15px;
+            background-color: #6b8e23;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .feedback-form button:hover {
+            background-color: #4e6e1a;
+        }
+        @media (max-width: 900px) {
+            .catalog__item {
+                width: 45%;
+            }
+            .page-layout {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 600px) {
+            .catalog__item {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div><img src="log.png" alt="Логотип РыБАлко" class="logo"></div>
+        <nav class="navigation">
+            <ul>
+                <li><button onclick="location.href='index.html'">🏠 Главная</button></li>
+                <li><button onclick="location.href='catalog.html'">🎣 Каталог</button></li>
+                <li><button onclick="location.href='info.html'">💳 Оплата и доставка</button></li>
+                <li><button onclick="location.href='contacts.html'">📞 Контакты</button></li>
+                <li><button onclick="location.href='cart.html'">🧺 Корзина</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Каталог товаров</h1>
+        <div class="page-layout">
+            <aside class="filter">
+                <h2>Фильтр</h2>
+                <form>
+                    <label>Категория:</label>
+                    <label><input type="checkbox" name="category" value="удочки"> Удочки</label>
+                    <label><input type="checkbox" name="category" value="катушки"> Катушки</label>
+                    <label><input type="checkbox" name="category" value="аксессуары"> Аксессуары</label>
+                    <label>Производитель:</label>
+                    <label><input type="radio" name="brand" value="apple"> Apple</label>
+                    <label><input type="radio" name="brand" value="samsung"> Samsung</label>
+                    <label><input type="radio" name="brand" value="xiaomi"> Xiaomi</label>
+                    <label for="sort">Сортировка:</label>
+                    <select id="sort" name="sort">
+                        <option value="price-asc">По возрастанию цены</option>
+                        <option value="price-desc">По убыванию цены</option>
+                        <option value="name">По названию</option>
+                    </select>
+                </form>
+            </aside>
+            <section class="catalog">
+
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1011/280/180" alt="Товар 1" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 1</h3>
+                    <p class="catalog__description">Описание товара 1 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">1000 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1021/280/180" alt="Товар 2" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 2</h3>
+                    <p class="catalog__description">Описание товара 2 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">1250 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1031/280/180" alt="Товар 3" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 3</h3>
+                    <p class="catalog__description">Описание товара 3 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">1500 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1041/280/180" alt="Товар 4" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 4</h3>
+                    <p class="catalog__description">Описание товара 4 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">1750 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1051/280/180" alt="Товар 5" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 5</h3>
+                    <p class="catalog__description">Описание товара 5 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">2000 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1061/280/180" alt="Товар 6" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 6</h3>
+                    <p class="catalog__description">Описание товара 6 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">2250 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1071/280/180" alt="Товар 7" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 7</h3>
+                    <p class="catalog__description">Описание товара 7 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">2500 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1081/280/180" alt="Товар 8" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 8</h3>
+                    <p class="catalog__description">Описание товара 8 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">2750 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1091/280/180" alt="Товар 9" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 9</h3>
+                    <p class="catalog__description">Описание товара 9 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">3000 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+                <article class="catalog__item">
+                    <img src="https://picsum.photos/id/1101/280/180" alt="Товар 10" class="catalog__image" />
+                    <h3 class="catalog__title">Товар 10</h3>
+                    <p class="catalog__description">Описание товара 10 для рыбалки и отдыха.</p>
+                    <p class="catalog__price">3250 ₽</p>
+                    <button class="catalog__button">Добавить в корзину</button>
+                </article>
+            </section>
+        </div>
+        <section class="feedback-form">
+            <h2>Свяжитесь с нами</h2>
+            <form>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="subject">Тема сообщения:</label>
+                <select id="subject" name="subject">
+                    <option value="order">Вопрос по заказу</option>
+                    <option value="product">Информация о товаре</option>
+                    <option value="other">Другое</option>
+                </select>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 РыБАлко. Ловим по-честному!</p>
+    </footer>
+</body>
+</html>

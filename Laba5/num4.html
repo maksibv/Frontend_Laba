@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .plans-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .plan {
+            background-color: white;
+            border-radius: 13px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            padding: 20px;
+            text-align: center;
+            width: 178px;
+            height: 305px;
+            transition: transform 1s ease;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .plan:hover {
+            transform: scale(1.04);
+            transition: transform 0.1s;
+            z-index: 2;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .plan-title {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 0;
+            text-transform: uppercase;
+            border-bottom: 3px solid;
+            margin-bottom: 15px;
+        }
+        
+        .plan-enterprise .plan-title {
+            border-bottom-color: rgb(199, 55, 86);
+        }
+        
+        .plan-professional .plan-title {
+            border-bottom-color: orange;
+        }
+        
+        .plan-standard .plan-title {
+            border-bottom-color: blue;
+        }
+        
+        .plan-basic .plan-title {
+            border-bottom-color: rgb(19, 214, 19);
+        }
+        
+        .plan-price {
+            font-size: 40px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .plan-period {
+            color: gray;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+        
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .plan-features li {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+            line-height: 2;
+        }
+        
+        .buy-button {
+            color: white;
+            border: none;
+            height: 35px;
+            width: 80px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 auto;
+            transition: background-color 0.3s;
+        }
+        
+        .plan-enterprise .buy-button {
+            background-color: rgb(199, 55, 86);
+        }
+        
+        .plan-professional .buy-button {
+            background-color: rgb(215, 145, 59);
+        }
+        
+        .plan-standard .buy-button {
+            background-color: rgb(43, 102, 137);
+        }
+        
+        .plan-basic .buy-button {
+            background-color: rgb(99, 187, 52);
+        }
+        
+        .plan-enterprise .buy-button:hover {
+            background-color: rgb(170, 45, 70);
+        }
+        
+        .plan-professional .buy-button:hover {
+            background-color: rgb(185, 120, 40);
+        }
+        
+        .plan-standard .buy-button:hover {
+            background-color: rgb(30, 80, 110);
+        }
+        
+        .plan-basic .buy-button:hover {
+            background-color: rgb(80, 150, 40);
+        }
+    </style>
+</head>
+<body>
+    <div class="plans-container">
+        <div class="plan plan-enterprise">
+            <div class="plan-title">ENTERPRISE</div>
+            <div class="plan-price">$69</div>
+            <div class="plan-period">per month</div>
+            <ul class="plan-features">
+                <li>10GB disk space</li>
+                <li>100GB monthly bandwidth</li>
+                <li>20 email accounts</li>
+                <li>Unlimited subdomains</li>
+            </ul>
+            <button class="buy-button">BUY</button>
+        </div>
+        
+        <div class="plan plan-professional">
+            <div class="plan-title">PROFESSIONAL</div>
+            <div class="plan-price">$29</div>
+            <div class="plan-period">per month</div>
+            <ul class="plan-features">
+                <li>5GB disk space</li>
+                <li>60GB monthly bandwidth</li>
+                <li>10 email accounts</li>
+                <li>Unlimited subdomains</li>
+            </ul>
+            <button class="buy-button">BUY</button>
+        </div>
+        
+        <div class="plan plan-standard">
+            <div class="plan-title">STANDARD</div>
+            <div class="plan-price">$19</div>
+            <div class="plan-period">per month</div>
+            <ul class="plan-features">
+                <li>3GB disk space</li>
+                <li>30GB monthly bandwidth</li>
+                <li>5 email accounts</li>
+                <li>Unlimited subdomains</li>
+            </ul>
+            <button class="buy-button">BUY</button>
+        </div>
+        
+        <div class="plan plan-basic">
+            <div class="plan-title">BASIC</div>
+            <div class="plan-price">$9</div>
+            <div class="plan-period">per month</div>
+            <ul class="plan-features">
+                <li>1GB disk space</li>
+                <li>10GB monthly bandwidth</li>
+                <li>2 email accounts</li>
+                <li>Unlimited subdomains</li>
+            </ul>
+            <button class="buy-button">BUY</button>
+        </div>
+    </div>
+</body>
+</html>

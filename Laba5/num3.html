@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата кредитной картой</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .card-number {
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+        .expiry-date, .cvv {
+            flex: 1;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .card-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .card-icon {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Оплата кредитной картой</h1>
+    
+    <form id="payment-form" action="/process-payment" method="POST">
+        <div class="form-group">
+            <label for="card-number">Номер карты</label>
+            <input type="text" id="card-number" class="card-number" 
+                   placeholder="1234 5678 9012 3456" pattern="[0-9\s]{13,19}" 
+                   title="Пожалуйста, введите номер карты (13-19 цифр)" required>
+            <small>Формат: 13-19 цифр с пробелами или без</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="card-name">Имя владельца</label>
+            <input type="text" id="card-name" placeholder="IVAN IVANOV" 
+                   pattern="[A-Z\s]+" title="Только заглавные буквы и пробелы" required>
+            <small>Только заглавные латинские буквы</small>
+        </div>
+        
+        <div class="row">
+            <div class="form-group expiry-date">
+                <label for="card-expiry">Срок действия</label>
+                <input type="text" id="card-expiry" placeholder="MM/ГГ" 
+                       pattern="(0[1-9]|1[0-2])\/[0-9]{2}" 
+                       title="Формат: MM/ГГ (например: 12/25)" required>
+                <small>Формат: MM/ГГ</small>
+            </div>
+            
+            <div class="form-group cvv">
+                <label for="card-cvv">CVV/CVN</label>
+                <input type="text" id="card-cvv" placeholder="123" 
+                       pattern="[0-9]{3,4}" title="3 или 4 цифры" required>
+                <small>3 или 4 цифры на обратной стороне карты</small>
+            </div>
+        </div>
+        
+        <div class="card-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Visa_2021.svg/768px-Visa_2021.svg.png" alt="Visa" class="card-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg" alt="Mastercard" class="card-icon">
+            <img src="https://zcc.ru/services/pay_return/mir_logo_small_en.png" alt="МИР" class="card-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple Pay" class="card-icon">
+        </div>
+        
+        <button type="submit">Оплатить</button>
+    </form>
+</body>
+</html>
