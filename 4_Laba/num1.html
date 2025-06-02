@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Загрузка видео</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-box {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail {
+            width: 200px;
+            height: 100px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thumbnail img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .info {
+            flex: 1;
+            min-width: 200px;
+            align-self: flex-start;
+        }
+
+        .progress-bar {
+            position: relative;
+            flex: 1;
+            display: flex;
+            border: 1px solid #5981d7;
+            height: 30px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            background-color: #4e86ff62;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        .progress-content {
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 10px;
+            font-size: 14px;
+            right: 10px;
+        }
+        .zag{
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .text {
+            font-size: 12px;
+            color: #555;
+        }
+
+        .done-btn {
+            background-color: #2a4e8a;
+            color: white;
+            border: none;
+            padding: 5px 40px;
+            font-size: 16px;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        @media (max-width: 600px) {
+            .upload-box {
+                flex-direction: column;
+            }
+
+            .thumbnail {
+                width: 100%;
+                height: 150px;
+            }
+
+            .thumbnail img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .done-btn {
+                align-self: stretch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="upload-box">
+            <div class="thumbnail">
+                <img src="https://www.svgrepo.com/show/421602/data-download-downloading.svg" alt="Иконка загрузки" />
+            </div>
+            <div class="info">
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text">UPLOADING 40%</span>
+                    </div>
+                    <div class="progress-content">
+                        <span>About 23 minutes remaining</span>
+                    </div>
+                </div>
+                <div class="zag"><b>Title of video</b></div>
+                <div class="text">
+                    * Your video is still uploading. Please keep this page open until it's done.
+                </div>
+            </div>
+            <button class="done-btn">DONE</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .text-section {
+            flex: 2;
+        }
+
+        .tables-section {
+            flex: 1;
+        }
+
+        table {
+            min-width: 350px;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 70%;
+            margin-bottom: 20px;
+        }
+
+        th {
+            background-color: rgb(26, 76, 130);
+            text-align: start;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            background-color: rgba(176, 212, 255, 0.786);
+            color: rgba(27, 44, 64, 0.786);
+            padding: 10px;
+            border-top: 1px solid black;
+        }
+
+        @media (max-width: 800px) and (min-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .tables-section {
+                display: flex;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .tables-section table {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 599px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .tables-section {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-section">
+            <div><b>Introduction</b></div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, possimus?
+                Dolorem praesentium tenetur similique itaque voluptatum unde laboriosam veniam iure!
+                Veritatis aperiam enim nemo ratione eum praesentium sunt odit saepe.
+                Consectetur ullam reiciendis asperiores veniam facilis possimus consequatur nisi voluptatum!
+                Itaque enim doloremque mollitia, labore dicta perspiciatis quibusdam provident unde?
+                Id fuga laudantium, labore dolorum voluptates ipsam error illum pariatur.
+                Ullam excepturi est unde quae consectetur ab neque adipisci aliquam?
+                Explicabo quaerat voluptatem itaque tempore, vel neque enim quisquam exercitationem?
+                Laborum iusto, sequi harum voluptates magni tenetur? Similique, ab cumque.
+                Voluptate, nihil? Quia ullam ad aspernatur tenetur eveniet! Sunt, temporibus.
+            </p>
+
+            <div><b>Additional Information</b></div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, voluptatibus?
+                Quae accusamus magni sequi veritatis sapiente cumque eaque. Illo, placeat!
+                Enim nam tempore quo voluptate non unde modi cum quod?
+                Quae tempora quas aliquid quia, ullam pariatur? Soluta, quia libero!
+                Earum est doloremque veritatis officiis accusantium blanditiis eveniet optio ad.
+                Beatae est laboriosam voluptatibus repudiandae temporibus optio reiciendis repellendus natus.
+                Necessitatibus maiores accusamus illum quo eligendi cupiditate minima hic molestias.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, fugit.
+                Ipsum veniam consequatur facere ullam debitis omnis obcaecati, officiis aliquid?
+                Architecto laboriosam sapiente beatae totam iste repellat porro laborum iure!
+                Minus placeat sed soluta quasi dolores obcaecati consequatur eius incidunt?
+                Optio voluptatum fugiat hic aliquid assumenda nisi dignissimos magni omnis!
+            </p>
+        </div>
+
+        <div class="tables-section">
+            <div class="Actions">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet.</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet.</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="Plans">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plans</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet.</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="РыБАлко, Рыбалка, Снасти, Ловись рыбка">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>РыБАлко — Каталог товаров</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="log.png">
+    <style>
+        /* Стили каталога */
+        main {
+            padding: 30px;
+            background-color: #f7f7f7;
+            min-height: 80vh;
+        }
+
+        .catalog {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .catalog__item {
+            background-color: white;
+            border: 2px solid #d2d2d2;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            transition: transform 0.2s ease;
+            cursor: default;
+        }
+
+            .catalog__item:hover {
+                transform: scale(1.03);
+                border-color: #6b8e23;
+                box-shadow: 0 4px 15px rgba(107, 142, 35, 0.4);
+            }
+
+        .catalog__image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .catalog__title {
+            font-weight: bold;
+            font-size: 20px;
+            color: #2e2e2e;
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .catalog__description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: center;
+            min-height: 40px;
+        }
+
+        .catalog__price {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #6b8e23;
+        }
+
+        .catalog__button {
+            background-color: #6b8e23;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 250px;
+            transition: background-color 0.3s ease;
+        }
+
+            .catalog__button:hover {
+                background-color: #56721b;
+            }
+        /* Адаптивность */
+        @media (max-width: 900px) {
+            .catalog__item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .catalog__item {
+                width: 90%;
+            }
+
+            .navigation ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="log.png" alt="Логотип РыБАлко" class="logo">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><button onclick="location.href='index.html'">🏠 Главная</button></li>
+                <li><button onclick="location.href='catalog.html'">🎣 Каталог</button></li>
+                <li><button onclick="location.href='info.html'">💳 Оплата и доставка</button></li>
+                <li><button onclick="location.href='contacts.html'">📞 Контакты</button></li>
+                <li><button onclick="location.href='cart.html'">🧺 Корзина</button></li>
+                <li>
+                    <form action="" method="GET" class="search-form">
+                        <input type="text" name="query" placeholder="Чего ищем, рыбак?" class="search-input" required>
+                        <button type="submit" class="search-button">Искать</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Каталог товаров</h1>
+
+        <section class="catalog">
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1011/280/180" alt="Товар 1" class="catalog__image" />
+                <h3 class="catalog__title">Удочка "Ловись-лови"</h3>
+                <p class="catalog__description">Легкая и прочная удочка для начинающих рыболовов.</p>
+                <p class="catalog__price">1500 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1021/280/180" alt="Товар 2" class="catalog__image" />
+                <h3 class="catalog__title">Катушка "Вихрь"</h3>
+                <p class="catalog__description">Надежная катушка с плавным ходом.</p>
+                <p class="catalog__price">3200 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1031/280/180" alt="Товар 3" class="catalog__image" />
+                <h3 class="catalog__title">Наживка "Мормышка"</h3>
+                <p class="catalog__description">Эффективная наживка для пресноводной рыбы.</p>
+                <p class="catalog__price">300 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1041/280/180" alt="Товар 4" class="catalog__image" />
+                <h3 class="catalog__title">Снасть "Балансир"</h3>
+                <p class="catalog__description">Универсальная снасть для ловли хищника.</p>
+                <p class="catalog__price">900 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1051/280/180" alt="Товар 5" class="catalog__image" />
+                <h3 class="catalog__title">Эхолот "Рыбак-2000"</h3>
+                <p class="catalog__description">Современный эхолот с цветным дисплеем.</p>
+                <p class="catalog__price">8500 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1061/280/180" alt="Товар 6" class="catalog__image" />
+                <h3 class="catalog__title">Спиннинг "Мастер"</h3>
+                <p class="catalog__description">Легкий и прочный спиннинг для ловли на блесну.</p>
+                <p class="catalog__price">4200 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1071/280/180" alt="Товар 7" class="catalog__image" />
+                <h3 class="catalog__title">Плетеный шнур "Титан"</h3>
+                <p class="catalog__description">Прочный и надежный плетеный шнур.</p>
+                <p class="catalog__price">1100 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1081/280/180" alt="Товар 8" class="catalog__image" />
+                <h3 class="catalog__title">Кемпинговый стул</h3>
+                <p class="catalog__description">Удобный складной стул для отдыха на природе.</p>
+                <p class="catalog__price">2300 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1091/280/180" alt="Товар 9" class="catalog__image" />
+                <h3 class="catalog__title">Набор блесен</h3>
+                <p class="catalog__description">Комплект блесен для ловли различных видов рыбы.</p>
+                <p class="catalog__price">1200 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+            <article class="catalog__item">
+                <img src="https://picsum.photos/id/1101/280/180" alt="Товар 10" class="catalog__image" />
+                <h3 class="catalog__title">Водонепроницаемый рюкзак</h3>
+                <p class="catalog__description">Защитит вещи от воды и дождя во время рыбалки.</p>
+                <p class="catalog__price">3500 ₽</p>
+                <button class="catalog__button">Добавить в корзину</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 РыБАлко. Ловим по-честному!</p>
+        <p>Связь с нами:</p>
+        <p>Email: <a href="mailto:info@ebalka.ru">info@ebalka.ru</a></p>
+        <p>Телефон: <a href="tel:+78005553535">+7 (800) 555-35-35</a></p>
+        <p>Где мы есть:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://vk.com" target="_blank">VK</a>
+
+        <section style="margin-top: 20px;">
+            <p>🔧 При поддержке:</p>
+            <img src="Unity-logo.png" alt="Unity Logo" style="width: 120px; margin-top: 10px;">
+        </section>
+    </footer>
+</body>
+</html>
